@@ -51,7 +51,6 @@ bower_components
 .dynamodb/
 .DS_Store
 .cache/
-yarn.lock
 
 
 

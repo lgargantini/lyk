@@ -1,0 +1,17 @@
+import React from 'react';
+import './App.css';
+import Header from './components/Header';
+import LeftNav from './components/LeftNav';
+import ProductComponents from './components/ProductComponents';
+
+const App = () => {
+  return (
+    <div className="App">
+      <Header />
+      <LeftNav />
+      <ProductComponents />
+    </div>
+  );
+}
+
+export default App;
