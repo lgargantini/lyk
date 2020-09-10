@@ -35,15 +35,15 @@ type Category = {
   key: string | null;
 };
 
-const ProductCategoryRow = ({ category }: Category) => {
+export const ProductCategoryRow = ({ category }: Category) => {
   return (
-    <tr>
+    <tr data-testid="product-category-row">
       <th>{category}</th>
     </tr>
   );
 };
 
-const ProductRow = (props: ProductRowProps) => {
+export const ProductRow = (props: ProductRowProps) => {
   const product = props.product;
   const name = product.stocked ? (
     product.name
@@ -52,14 +52,14 @@ const ProductRow = (props: ProductRowProps) => {
   );
 
   return (
-    <tr>
+    <tr data-testid="product-row">
       <td>{name}</td>
       <td>{product.price}</td>
     </tr>
   );
 };
 
-class ProductTable extends React.Component<Products> {
+export class ProductTable extends React.Component<Products> {
   render() {
     const filterText = this.props.filterText || "";
     const inStockOnly = this.props.inStockOnly;
@@ -87,7 +87,7 @@ class ProductTable extends React.Component<Products> {
     });
 
     return (
-      <table>
+      <table id="product-table">
         <thead>
           <tr>
             <th>Name</th>
@@ -100,7 +100,7 @@ class ProductTable extends React.Component<Products> {
   }
 }
 
-class SearchBar extends React.Component<SearchProps> {
+export class SearchBar extends React.Component<SearchProps> {
   constructor(props: SearchProps) {
     super(props);
     this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
@@ -117,9 +117,10 @@ class SearchBar extends React.Component<SearchProps> {
 
   render() {
     return (
-      <form>
+      <form id="search-bar-form">
         <input
           type="text"
+          name="search-bar-form-input"
           placeholder="Search..."
           value={this.props.filterText}
           onChange={this.handleFilterTextChange}
@@ -127,6 +128,7 @@ class SearchBar extends React.Component<SearchProps> {
         <p>
           <input
             type="checkbox"
+            name="search-bar-form-checkbox"
             checked={this.props.inStockOnly}
             onChange={this.handleInStockChange}
           />{" "}
@@ -179,4 +181,4 @@ class FilterableProductTable extends React.Component<Products, ProductState> {
   }
 }
 
-export { FilterableProductTable };
+export default FilterableProductTable;

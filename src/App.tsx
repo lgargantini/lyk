@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Header from "./components/Header";
 import LeftNav from "./components/LeftNav";
-import { FilterableProductTable } from "./components/ProductComponents";
+import FilterableProductTable from "./components/ProductComponents";
 import { PRODUCTS } from "./constants";
 
 const App = () => {

@@ -9,3 +9,8 @@ test("Renders Main Title", () => {
 });
 
 //it should show the icon
+test("Renders main logo", () => {
+  const { getByRole } = render(<Header />);
+  const logo = getByRole("img", { name: /logo/i });
+  expect(logo).toBeInTheDocument();
+});
