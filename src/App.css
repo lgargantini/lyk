@@ -1,8 +1,20 @@
-.App {
+.app {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.app-logo {
+  height: 5px;
   pointer-events: none;
+}
+
+.app-nav {
+  float: left;
+  margin: 2% 2.5%;
+  width: 30%;
+}
+
+.app-content {
+  float: right;
+  margin: 2% 2.5%;
+  width: 60%;
 }

@@ -1,23 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import logo from './logo.svg';
-import './Header.css';
+import logo from "./logo.svg";
+import "./Header.css";
 
 const Header = () => (
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/Header.js</code> and save to reload.
-        </p>
-        <a
-          className="App-header-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-            Header
-            </a>
-      </header>
-  );
+  <div>
+    <img src={logo} className="app-header-logo" alt="logo" />
+    <h1 className="app-header-h1">TEST PAGE</h1>
+  </div>
+);
 
 export default Header;
